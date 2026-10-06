@@ -45,3 +45,8 @@ class GestorTareas:
             if tarea.id == tarea_id:
                 return tarea
         raise KeyError(f"No existe la tarea {tarea_id}")
+
+    def eliminar(self, tarea_id):
+        tarea = self.buscar(tarea_id)   # lanza KeyError si no existe
+        self._tareas.remove(tarea)
+        return tarea
