@@ -50,4 +50,4 @@ def test_resumen_sin_tareas():
 # TF-11 Bug: títulos duplicados
 def test_no_permite_titulos_duplicados(gestor):
     with pytest.raises(ValueError):
-        gestor.agregar("  preparar DEMO ")
+        gestor.agregar("  preparar DEMO ","alta")
